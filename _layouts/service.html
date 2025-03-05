@@ -1,0 +1,65 @@
+---
+layout: default
+---
+<div class="service-page">
+  <h1>{{ page.title }}</h1>
+  
+  {% if page.image %}
+  <div class="service-image">
+    <img src="{{ page.image }}" alt="{{ page.title }}" class="img-fluid">
+  </div>
+  {% endif %}
+  
+  <div class="service-description">
+    {{ content }}
+  </div>
+  
+  {% if page.pricing %}
+  <div class="service-pricing">
+    <h2>Pricing</h2>
+    <p class="price">Starting at {{ page.pricing }}</p>
+    {% if page.pricing_details %}
+    <div class="pricing-details">
+      {{ page.pricing_details | markdownify }}
+    </div>
+    {% endif %}
+  </div>
+  {% endif %}
+  
+  <div class="service-cta">
+    <h2>Ready to get started?</h2>
+    <p>Fill out our contact form and we'll get back to you within 24 hours.</p>
+    <a href="/contact/?service={{ page.title | url_encode }}" class="btn btn-primary">Request a Quote</a>
+  </div>
+  
+  {% if page.testimonials %}
+  <div class="testimonials">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial-grid">
+      {% for testimonial in page.testimonials %}
+      <div class="testimonial">
+        <blockquote>{{ testimonial.quote }}</blockquote>
+        <cite>— {{ testimonial.author }}</cite>
+        {% if testimonial.location %}
+        <div class="location">{{ testimonial.location }}</div>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+  
+  {% if page.faq %}
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-list">
+      {% for item in page.faq %}
+      <div class="faq-item">
+        <h3>{{ item.question }}</h3>
+        <div class="answer">{{ item.answer | markdownify }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+</div> 

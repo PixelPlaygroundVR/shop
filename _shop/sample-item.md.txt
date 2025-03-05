@@ -1,0 +1,23 @@
+---
+layout: shop_item
+title: Sample Gaming Keyboard
+image: https://via.placeholder.com/200
+description: A high-quality gaming keyboard with RGB lighting and mechanical switches. Perfect for gamers who want responsive keys and customizable lighting effects. Features anti-ghosting technology and programmable macro keys.
+price: $59.99
+affiliate_link: https://amazon.com/sample-keyboard?tag=youraffiliateid-20
+---
+
+## Product Features
+
+- Mechanical key switches for tactile feedback
+- Customizable RGB lighting with 16.8 million colors
+- Anti-ghosting technology for accurate input
+- Programmable macro keys for gaming shortcuts
+- Durable construction with ergonomic wrist rest
+- Compatible with Windows and Mac
+
+## Why We Recommend It
+
+This keyboard offers excellent value for gamers looking to upgrade their setup without breaking the bank. The mechanical switches provide satisfying tactile feedback, while the RGB lighting adds a customizable aesthetic to any gaming station.
+
+*Note: As an Amazon Associate, we earn from qualifying purchases.*

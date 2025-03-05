@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+<body class="{% if page.layout %}layout-{{ page.layout }}{% endif %} {% if page.url == '/' %}home{% endif %}">
+  {% include header.html %}
+  
+  <main class="site-content">
+    <div class="container">
+      {{ content }}
+    </div>
+  </main>
+  
+  {% include footer.html %}
+  
+  <!-- JavaScript -->
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

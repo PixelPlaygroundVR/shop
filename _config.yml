@@ -1,0 +1,106 @@
+title: Pixel Playgrounds
+description: Trendy Tech Deals for Gamers, Streamers, and Podcasters
+baseurl: "" # Empty for GitHub Pages root deployment
+url: "https://username.github.io" # Replace with your GitHub Pages URL or custom domain
+logo: /assets/images/logo.png
+
+# GitHub Pages specific settings
+github: [metadata]
+remote_theme: jekyll/minima
+
+# Theme and plugins
+# theme: minima # Commented out for GitHub Pages compatibility
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-remote-theme
+
+# Collections
+collections:
+  shop:
+    output: true
+    permalink: /shop/:path/
+  services:
+    output: true
+    permalink: /services/:path/
+
+# Default layouts
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: Pixel Playgrounds
+      comments: true
+      share: true
+  - scope:
+      path: ""
+      type: shop
+    values:
+      layout: shop_item
+  - scope:
+      path: ""
+      type: services
+    values:
+      layout: service
+
+# Pagination
+paginate: 10
+paginate_path: "/blog/page:num/"
+
+# Social media
+social:
+  twitter: pixelplaygrounds
+  facebook: pixelplaygrounds
+  instagram: pixelplaygrounds
+  discord: https://discord.gg/pixelplaygrounds
+
+# Analytics and monetization
+google_analytics: G-XXXXXXXXXX
+adsense_id: ca-pub-XXXXXXXXXXXXXXXX
+amazon_affiliate_id: pixelplaygrounds-20
+
+# API keys (replace with actual keys in production)
+amazon_api_key: YOUR_AMAZON_API_KEY
+amazon_secret_key: YOUR_AMAZON_SECRET_KEY
+amazon_associate_tag: YOUR_AMAZON_ASSOCIATE_TAG
+
+# Automation settings
+automation:
+  rss_feeds:
+    - name: Steam Prices
+      url: https://steamprices.com/feed
+    - name: Epic Bundle
+      url: https://www.epicbundle.com/feed
+  update_frequency: daily
+  post_limit: 10
+  social_hashtags:
+    - TechDeals
+    - GamingDeals
+    - StreamingSetup
+    - PixelPlaygrounds
+
+# Contact form
+formspree_endpoint: https://formspree.io/f/YOUR_FORMSPREE_ID
+
+# Supabase settings
+supabase_url: https://YOUR_SUPABASE_PROJECT.supabase.co
+supabase_anon_key: YOUR_SUPABASE_ANON_KEY
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /blog/:year/:month/:day/:title/
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .gitignore
+  - README.md
+  - LICENSE
+  - n8n_workflows
+  - automation_scripts 
