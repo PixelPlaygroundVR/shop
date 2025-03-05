@@ -1,0 +1,25 @@
+# _config.yml
+title: Pixel Playgrounds
+description: Trendy Tech Deals for Gamers, Streamers, and Podcasters
+baseurl: "" # Empty for GitHub Pages root deployment
+url: "https://username.github.io" # Replace with your GitHub Pages URL or custom domain
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+collections:
+  shop:
+    output: true
+    permalink: /shop/:path/
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: Pixel Playgrounds
+  - scope:
+      path: ""
+      type: shop
+    values:
+      layout: shop_item
